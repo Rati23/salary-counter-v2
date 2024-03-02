@@ -1,0 +1,221 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://tse4.mm.bing.net/th/id/OIG1.MtX8LhBmao3KOF4CUjlB?pid=ImgGn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Heading styles */
+.head {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    color: #1e90ff; /* Dodger blue */
+    margin-bottom: 30px;
+}
+
+/* Container for months */
+.months {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+/* Individual month container */
+.mon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Adding transparency */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adding transitions */
+}
+
+.mon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading within month container */
+.mon h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #1e90ff; /* Dodger blue */
+    margin-bottom: 10px;
+}
+
+/* Individual month details */
+.month {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+/* Input field styles */
+.month input[type="text"] {
+    width: calc(100% - 20px); /* Take full width with padding adjustment */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out; /* Adding transition */
+}
+
+.month input[type="text"]:focus {
+    border-color: #1e90ff; /* Dodger blue */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #1e90ff; /* Dodger blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Adding transition */
+}
+
+button:hover {
+    background-color: #007bff; /* Primary blue */
+}
+
+/* Count button styles */
+.count {
+    padding: 15px 30px;
+    background-color: #28a745; /* Success green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out; /* Adding transition */
+}
+
+.count:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Footer styles */
+.union {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Image within footer container */
+.union img {
+    width: 50px;
+    margin-left: 10px;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mon {
+    animation: slideInFromLeft 0.5s ease-out;
+}
+/* For screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    .months {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For screens between 600px and 900px */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        padding: 30px;
+    }
+    .months {
+        justify-content: center;
+    }
+}
+/* Example hover effect on buttons */
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff7f50; /* Change to a different color on hover */
+    color: white; /* Change text color on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+/* Use a custom cursor */
+body {
+    cursor: url('icons8-cursor-32.png'), auto;
+}
+/* Example gradient animation */
+.gradient-bg {
+    background: linear-gradient(45deg, #ff512f, #dd2476, #ff512f, #dd2476);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Example of a CSS shape */
+.custom-shape {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    background-color: #1e90ff;
+}
+/* Add background overlay for readability */
+.mon {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+}
+/* Add text shadow for a subtle glow effect */
+.head {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for a subtle glow */
+}
+/* Add border radius for rounded corners */
+.mon {
+    border-radius: 15px; /* Rounded corners */
+}
